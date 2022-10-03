@@ -24,7 +24,7 @@
 82 -> 10
 9012 -> 12*/
 
-Console.WriteLine("Input number: ");
+/*Console.WriteLine("Input number: ");
 int number = int.Parse(Console.ReadLine()); //
 
   int Sum(int number)
@@ -41,8 +41,35 @@ int number = int.Parse(Console.ReadLine()); //
    return result;
   }
 
-Console.WriteLine("The sum: " + Sum(number));
+Console.WriteLine("The sum: " + Sum(number));*/
 
 /*Задача 29: Напишите программу, которая задаёт массив из 8 рандомных элементов и выводит их на экран.
 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 6, 1, 33 -> [6, 1, 33]*/
+
+void Eight(int[] element)
+{
+int length = element.Length;
+int index = 0;
+
+while (index < length)
+{
+    element[index] = new Random().Next(0,100);
+    index++;
+}
+}
+
+void Print(int[] el)
+{
+    int count = el.Length;
+    int pos =0;
+    while (pos<count)
+    {
+        Console.Write(el[pos] + " ");
+        pos++;
+    }
+}
+
+int[] array = new int[8];
+Eight(array);
+Print(array);
